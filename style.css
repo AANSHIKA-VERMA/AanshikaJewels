@@ -1,0 +1,645 @@
+/* body {
+  margin: 0;
+  font-family: 'lora', serif;
+  background-color: #e1dfd9;
+  color: #333;
+  scroll-behavior: smooth;
+} */
+
+:root {
+  --bg-main: #e1dfd9;
+  --bg-section: #f8f5f0;
+  --bg-card: #fff;
+  --text-main: #333;
+  --text-secondary: #5a4c36;
+  --accent: #bfa77f;
+  --nav-bg: rgba(255,255,255,0.247);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 3rem ;
+  box-shadow: none;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.247);
+  backdrop-filter: blur(10px);
+  background-color: var(--nav-bg);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8em;
+  /* font-weight: bold; */
+  color: #39352f;
+  letter-spacing: 1px;
+}
+
+.nav-links-container{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo{
+  height: 4rem; 
+  width: 4rem;
+  vertical-align:middle; 
+  margin-right: 0.5rem;
+}
+.nav-center a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  letter-spacing: 2px;
+}
+
+.nav-center a:hover {
+  color: #bfa77f;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-right i {
+  margin-left: 20px;
+  font-size: 1.2em;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-right i:hover {
+  color: #000000;
+}
+#hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Center vertically */
+  align-items: center;       /* Center horizontally */
+  text-align: center; 
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 2;
+}
+.hero h1, .hero p {
+  position: relative;
+  z-index: 3;
+  align-self: center;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* about */
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #fdfdfd; /* A slightly off-white background */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-content {
+    flex: 1; /* Takes up 50% of the space */
+    max-width: 500px;
+}
+
+.section-icon {
+    font-size: 2rem;
+    color: #c5a47e; /* A sophisticated gold/bronze color */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif; /* A classic, elegant serif font */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content p {
+    font-family: 'Lato', sans-serif; /* A clean sans-serif font for readability */
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1; /* Takes up 50% of the space */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c5a47e;
+}
+
+/* Make it responsive for mobile */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text on top of each other */
+        text-align: center;
+    }
+}
+
+.section, .story-section, .testimonials-section {
+  background: var(--bg-section);
+}
+
+.section {
+  padding: 50px ;
+  text-align: center;}
+
+.section h2 {
+  font-size: 2.5em;
+  color: #bfa77f;
+  margin-bottom: 20px;
+}
+
+.section p, blockquote {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 14rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.584);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #f8f5f0;
+  color: #7a6e57;
+  padding: 60px 40px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* testimonials */
+/* --- Testimonials Section Styling --- */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #f8f5f2; /* A warm, gentle beige background */
+    text-align: center;
+}
+
+.testimonials-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Reusable section title styling */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+    margin: 20px; /* Provides space for shadow and ensures it doesn't get cut off */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Allow card to grow with content */
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #f0e9e1;
+    align-self: center;
+}
+
+.testimonial-card blockquote p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    color: #c5a47e; /* Sophisticated gold/bronze color */
+    font-size: 1rem;
+}
+
+/* --- Swiper Carousel Controls Styling --- */
+/* Positioning the entire slider */
+.testimonials-slider {
+    padding-bottom: 50px; /* Make space for pagination dots */
+}
+
+.swiper-slide{
+  height: auto;
+}
+/* Style for the arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #c5a47e; /* Use your brand's accent color */
+}
+
+/* Style for the pagination dots */
+.swiper-pagination-bullet {
+    background-color: #c5a47e;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #c5a47e;
+    opacity: 1;
+}
+
+/* footer */
+/* --- Footer Section Styling --- */
+.footer {
+    background-color: #fdfdfd; /* A very light, luxurious background */
+    padding: 60px 20px 20px; /* More padding at bottom for copyright */
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    border-top: 1px solid #f0e9e1; /* Subtle top border */
+}
+
+.footer-container {
+    max-width: 1200px; /* Controls the overall width of the footer content */
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    gap: 40px; /* Space between columns */
+    margin-bottom: 40px;
+}
+
+/* --- Footer Brand/Logo Column --- */
+.footer-brand {
+    flex: 1; /* Allows it to grow, but sets a base for other columns to share space */
+    min-width: 250px; /* Minimum width before wrapping */
+}
+
+.footer-logo img {
+    max-width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.brand-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* --- Quick Links Column --- */
+.footer-links-group {
+    flex: 0 0 auto; /* Don't grow, don't shrink, take up auto width */
+    min-width: 150px; /* Minimum width for links column */
+}
+
+.footer-links-group h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #777;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c5a47e; /* Accent color on hover */
+}
+
+/* --- Contact & Newsletter Column --- */
+.footer-contact-newsletter {
+    flex: 2; /* Allow this column to take up more space */
+    min-width: 280px; /* Minimum width before wrapping */
+}
+
+.footer-contact-newsletter h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+}
+
+.newsletter-form input::placeholder {
+    color: #aaa;
+}
+
+.newsletter-form button {
+    background-color: #c5a47e; /* Accent color for button */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #b3946f; /* Slightly darker accent on hover */
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #777;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #c5a47e;
+}
+
+/* --- Footer Bottom (Copyright) --- */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #eee; /* Separator line above copyright */
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center; /* Center items in the stack */
+        text-align: center;
+        gap: 30px; /* Reduce gap when stacked */
+    }
+
+    .footer-brand,
+    .footer-links-group,
+    .footer-contact-newsletter {
+        min-width: unset; /* Remove min-width constraints */
+        width: 100%; /* Make them take full width */
+        max-width: 350px; /* Optional: limit width even when stacked for better readability */
+    }
+
+    .footer-links-group ul {
+        display: flex; /* Make links horizontal on mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* Space between horizontal links */
+    }
+    
+    .footer-links li {
+        margin-bottom: 0; /* Remove vertical margin for horizontal links */
+    }
+
+    .footer-social {
+        justify-content: center; /* Center social icons */
+    }
+
+    .newsletter-form {
+        max-width: 300px; /* Constrain form width on small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links-group ul {
+        flex-direction: column; /* Stack links vertically again on very small screens */
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1050px) {
+  #hamburger-menu {
+        display: block;
+    }
+  .nav-links-container {
+        display: flex; /* Keep display:flex so children layout correctly */
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+
+        position: absolute;
+        top: 100%; /* Position it right below the header */
+        left: 0;
+        width: 100%;
+        background-color: white; /* Or your navbar's background color */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure it's above other content */
+
+        /* --- NEW ANIMATION PROPERTIES --- */
+        max-height: 0; /* Initially hidden by having no height */
+        overflow: hidden; /* Hide content that exceeds max-height */
+        opacity: 0; /* Start fully transparent */
+        pointer-events: none; /* Prevent clicks when hidden */
+        transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease-out; 
+        /* Add transition for smooth animation */
+  }
+    .nav-links-container.active {
+        /* --- NEW ANIMATION PROPERTIES --- */
+        max-height: 500px; /* A sufficiently large height for the menu to slide down to */
+                            /* Adjust this if your menu is much taller or shorter */
+        opacity: 1; /* Fully visible */
+        pointer-events: auto; /* Allow clicks when visible */
+        padding-top: 1rem; /* Restore padding if you transitioned it */
+        /* padding-bottom: 1rem; /* Restore padding if you transitioned it  */
+    }
+
+    .nav-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    .nav-right {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee; /* A separator line */
+        width: 80%;
+        justify-content: center;
+    }
+
+
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    height: 60vh;
+    min-height: 350px;
+    padding: 0 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  .section {
+    padding: 60px 20px;
+  }
+  .gallery img {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;
+    min-height: 220px;
+    padding: 0 6px;
+  }
+  .hero h1 {
+    font-size: 1.3em;
+  }
+  .hero p {
+    font-size: 0.95em;
+  }
+  
+} 
